@@ -21,20 +21,17 @@
 #ifndef DYNAMICQTWIDGETSTEST_H
 # define DYNAMICQTWIDGETSTEST_H
 
-#include <QString>
-#include <QtTest>
+#include <QtCore/QString>
+#include <QtTest/QtTest>
 #include "dynamicqtwidgets.hpp"
 
 class DynamicQtWidgetsTest : public QObject
 {
-  Q_OBJECT
-
-public:
-  explicit DynamicQtWidgetsTest();
-  ~DynamicQtWidgetsTest();
-
-private Q_SLOTS:
-  void testCreateWidget();
-  void testCreateWidget_data();
+	Q_OBJECT
+	
+	private Q_SLOTS:
+       void testCreateWidget();
+       void testCreateWidget_data();
 };
+
 #endif

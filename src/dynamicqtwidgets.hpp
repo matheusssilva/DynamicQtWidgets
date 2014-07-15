@@ -25,18 +25,17 @@
 #include <QtWidgets/QWidget>
 #include <QtWidgets/QMessageBox>
 #include <QtUiTools/QUiLoader>
-#include <QString>
-#include <QFile>
+#include <QtCore/QString>
+#include <QtCore/QFile>
 
-class DYNAMICQTWIDGETSSHARED_EXPORT DynamicWidgets
+class DYNAMICQTWIDGETSSHARED_EXPORT DynamicQtWidgets
 {
 public:
-  explicit DynamicQtWidgets(QString, QWidget* = 0);
-  ~DynamicQtWidgets();
+  DynamicQtWidgets(QString, QWidget* = 0);
   QWidget* createWidget();
 
 private:
-  QWidget *parent;      // Parente for new widget
+  QWidget *parent;      	// Parente for new widget
   QString uifile;           // Ui File
 };
 

@@ -18,22 +18,14 @@
  * along with dynamicqtwidgets.so. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "dynamicqtwidgetstest.hpp"
-
-DynamicQtWidgetsTest::DynamicQtWidgetsTest()
-{
-}
-
-DynamicQtWidgetsTest::~DynamicQtWidgetsTest()
-{
-}
+#include "dynamicqtwidgetstest.moc"
 
 void DynamicQtWidgetsTest::testCreateWidget()
 {
   QFETCH(QString, file_ui);
   QFETCH(bool, widget);
 
-  DynamicQtWidgets dynawidg(file_ui);              // DynamicQtWidgets object
+  DynamicQtWidgets dynawidg(file_ui);              					// DynamicQtWidgets object
   QWidget *widtest = dynawidg.createWidget();
   QCOMPARE(widtest->isWidgetType(), widget);              // Compare DynamicQtWidgets::createWidget() return with QWidget type
   delete widtest;
@@ -47,5 +39,5 @@ void DynamicQtWidgetsTest::testCreateWidget_data()
   QTest::newRow("Valid File") << "test.ui" << true;                             // Valid File
   QTest::newRow("Inexistent File") << "inexistent.ui" << true;         // Inexistent File
   QTest::newRow("Invalid File") << "test_text.ui" << true;                // Invalid File
-  QTest::newRow("Empty Ui File") << "testempty.ui" << true;          // Empty File
+  QTest::newRow("Empty Ui File") << "testempty.ui" << true;         // Empty File
 }

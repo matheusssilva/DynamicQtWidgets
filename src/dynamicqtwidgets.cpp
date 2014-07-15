@@ -26,10 +26,6 @@ DynamicQtWidgets::DynamicQtWidgets(QString uifile, QWidget *parent) // Construct
   this->uifile = uifile;
 }
 
-DynamicQtWidgets::~DynamicQtWidgets() // Destructor
-{
-}
-
 QWidget* DynamicQtWidgets::createWidget()
 {
   QUiLoader loader;
