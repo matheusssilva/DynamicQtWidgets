@@ -3,6 +3,7 @@
 all: build
 	cd src; make
 	cd tests; make
+	cd build; ./Test
 
 #clear build
 clean:

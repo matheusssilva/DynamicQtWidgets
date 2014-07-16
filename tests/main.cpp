@@ -8,5 +8,5 @@ int main(int argc, char *argv[])
   DynamicQtWidgetsTest tests;
   QTest::qExec(&tests, argc, argv);
 
-  return app.exec();
+  return 0;
 }
